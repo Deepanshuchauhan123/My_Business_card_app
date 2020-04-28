@@ -10,24 +10,74 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.amber,
         body: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Center(
-                child: Image.asset(
-                  'lib/Images/Splashlogo.png',
-                  height: 250.0,
-                  width: 250.0,
+              CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage(
+                  'lib/Images/Deepanshu.JPG',
                 ),
               ),
-                Center(
-                child: Text("My Card",style: TextStyle(
-                fontSize: 30,
-                fontStyle: FontStyle.italic,
-                color: Colors.black
-              ),),)
+              Text(
+                "Deepanshu Chauhan",
+                style: TextStyle(
+                    fontFamily: "pacifico",
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              Text("FLUTTER DEVELOPER",
+                  style: TextStyle(
+                    fontFamily: "Crimson_Text",
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  )),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.amberAccent,
+                ),
+              ),
+              Card(
+                color: Colors.blueAccent,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.call,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    "+91-6377900004",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Crimson_Text',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.blueAccent,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    "mailtovenom@gmail.com",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Crimson_Text',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
